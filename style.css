@@ -19,7 +19,10 @@ body {
   
   /* Container with the background image */
   .container {
-    background: url('https://i.postimg.cc/TY28jTqJ/bg4-ia.jpg') no-repeat center center/cover;
+    background: url("CrystalBridge.webp");
+    background-size: cover;      
+    background-position: center;     
+    background-repeat: no-repeat; 
     min-height: 100vh;
     display: flex;
     justify-content: center;
