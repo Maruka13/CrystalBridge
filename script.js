@@ -6,10 +6,10 @@ function jogar() {
 
         escolhaJogador = prompt("Nível "+rodada+", vidro 1, 2 ou 3?")
         pisoQuebrado = Math.floor(Math.random()*3) +1;
-        rodada = 1000;
 
         if(escolhaJogador == pisoQuebrado) {
             alert("O vidro quebrou! Você morreu.")
+            return;
         }
         else {
             alert("Você passou! O piso qubrado estava na ponte: " + pisoQuebrado)
@@ -17,6 +17,10 @@ function jogar() {
 
         rodada = rodada + 1
 
+    }
+
+    if(rodada == 4) {
+        alert("Você venceu! Parabéns!")
     }
 
 }
