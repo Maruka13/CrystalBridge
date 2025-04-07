@@ -10,6 +10,9 @@ function jogar() {
         if(escolhaJogador == pisoQuebrado) {
             alert("O vidro quebrou! Você morreu.")
         }
+        else {
+            alert("Você passou! O piso qubrado estava na ponte: " + pisoQuebrado)
+        }
 
         rodada = rodada + 1
 
