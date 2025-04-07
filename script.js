@@ -1,13 +1,19 @@
 function jogar() {
 
     rodada = 1
-    while(rodada <= 3) {
+    while (rodada <= 3) {
         console.log("Rodada: " + rodada)
 
-        escolhaJogador = prompt("Nível "+rodada+", vidro 1, 2 ou 3?")
-        pisoQuebrado = Math.floor(Math.random()*3) +1;
+        escolhaJogador = prompt("Nível " + rodada + ", vidro 1, 2 ou 3?")
 
-        if(escolhaJogador == pisoQuebrado) {
+        while (escolhaJogador < 1 || escolhaJogador > 3) {
+            alert("Escolha inválida! Por favor, escolha um número entre 1 e 3.");
+            escolhaJogador = prompt("Nível " + rodada + ", vidro 1, 2 ou 3?");
+        }
+
+        pisoQuebrado = Math.floor(Math.random() * 3) + 1;
+
+        if (escolhaJogador == pisoQuebrado) {
             alert("O vidro quebrou! Você morreu.")
             return;
         }
@@ -19,10 +25,8 @@ function jogar() {
 
     }
 
-    if(rodada == 4) {
+    if (rodada == 4) {
         alert("Você venceu! Parabéns!")
     }
 
 }
-
-
